@@ -1,0 +1,69 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Apple Watch",
+      "author": 15,
+      "ISBN": "599$",
+      "publicationDate": "Oct 4, 2019",
+      "detail": "To make the best use of its size and location on your wrist, Apple Watch has all-new interactions and technologies. They let you do familiar things more quickly and conveniently. As well as some things that simply weren’t possible before. So using it is a whole new experience. One that’s more personal than ever.",
+      "publisher": "John Doe",
+      "price": "$120.00",
+      "genre": "Fantasy",
+      "format": "PDF",
+      "image": "../assets/images/watch-thumb.jpg"
+    },
+    {
+      "id": 2,
+      "title": "iPhone 6",
+      "author": 12,
+      "ISBN": "1000$",
+      "publicationDate": "Oct 4, 2019",
+      "detail": "iPhone 6 isn’t simply bigger — it’s better in every way. Larger, yet dramatically thinner. More powerful, but remarkably power efficient. With a smooth metal surface that seamlessly meets the new Retina HD display. It’s one continuous form where hardware and software function in perfect unison, creating a new generation of iPhone that’s better by any measure.",
+      "publisher": "John Doe",
+      "price": "$120.00",
+      "genre": "Fantasy",
+      "format": "PDF",
+      "image": "../assets/images/iphone-6-thumb.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Apple TV",
+      "author": 5,
+      "ISBN": "250$",
+      "publicationDate": "Oct 4, 2019",
+      "detail": "Apple TV is a digital media player and a microconsole developed and sold by Apple Inc. It is a small network appliance and entertainment device that can receive digital data from a number of sources and stream it to capable TV for playing on the TV screen.",
+      "publisher": "John Doe",
+      "price": "$120.00",
+      "genre": "Fantasy",
+      "format": "PDF",
+      "image": "../assets/images/tv-thumb.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Macbook pro",
+      "author": 8,
+      "ISBN": "2000$",
+      "publicationDate": "Oct 4, 2019",
+      "detail": "The MacBook Pro (sometimes abbreviated MBP[1]) is a line of Macintosh portable computers introduced in January 2006 by Apple Inc., and now in its third generation. Replacing the PowerBook G4, the MacBook Pro was the second model, after the iMac, to be announced in the Apple–Intel transition. It is also the high-end model of the MacBook family and is currently produced with 13- and 15-inch screens, while a 17-inch version was also available in the past.",
+      "publisher": "John Doe",
+      "price": "$120.00",
+      "genre": "Fantasy",
+      "format": "PDF",
+      "image": "../assets/images/macbook-pro-thumb.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Macbook Air",
+      "author": 6,
+      "ISBN": "1200$",
+      "publicationDate": "Oct 4, 2019",
+      "detail": "The MacBook Air is a line of Macintosh ultraportable notebook computers from Apple Inc. The Air was designed to balance both performance and portability, consisting of a full-sized keyboard design, a machined casing made of aluminum, and a very light and thin structure. The MacBook Air is available in two sizes, with the length of the diagonal display determining the model size: 13.3-inch and 11.6-inch (or 33.78 cm and 29.46 cm, respectively). A range of model choices with different specifications are produced by Apple, and as of 2011, all Air models use solid-state drive (SSD) storage and Intel Core i5 or i7 central processing units (CPUs).",
+      "publisher": "John Doe",
+      "price": "$120.00",
+      "genre": "Fantasy",
+      "format": "PDF",
+      "image": "../assets/images/macbook-air-thumb.jpg"
+    }
+  ]
+}

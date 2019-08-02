@@ -1,33 +1,155 @@
-.App {
-  text-align: center;
+.movingCards {
+  margin: 0px;
+  width: 60%;
+  display: inline-block;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.cardContainer {
+  background-color: grey;
+  height: 300px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.row {
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cards {
+  width: 100%;
+  z-index: 9;
+  transition: transform 300ms;
+}
+.cards:hover {
+  z-index: 10;
+  transform: scale(1.5);
+}
+
+.cardsBack {
+  height: 100%;
+  z-index: 8;
+}
+
+.cardRibbon {
+  overflow: visible;
+}
+
+/* .boxRow {
+  transition: box-shadow 0.4s;
+}
+.boxRow:hover {
+  box-shadow: 0 0 22px rgba(33, 33, 33, 0.2);
+} */
+
+.container-fluid.showcase {
+  width: 100%;
+  height: 93vh;
+  padding: 0;
+  background-color: black;
+  position: relative;
+  background: url("https://i.pinimg.com/originals/e7/bc/52/e7bc52b5b6591c855ed6888631b24b89.jpg")
+    no-repeat center center/cover;
+  overflow: hidde;
+  background-attachment: fixed;
+}
+
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: inset 100px 80px 150px #000000, inset -100px -80px 150px #000000;
+}
+
+.display-2.white.title {
+  font-weight: 300;
+}
+.display-4.white.subtitle {
+  font-weight: 0;
+  font-size: 40px;
+}
+
+.showcase-top {
+  z-index: 2;
+}
+
+.showcase-content {
+  position: relative;
+  top: 30%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  text-align: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+}
+
+.white {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* =============horizontalBar============== */
+
+.horizontalBar {
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  background-color: #000000;
+}
+/* =============tableBack============== */
+.tableBack {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: floralwhite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* .table-dark > tbody > tr:nth-child(odd) > td,
+.table-dark > tbody > tr:nth-child(odd) > th {
+  background-color: red; // Choose your own color here
+}
+ */
+
+th {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+tr {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* td:hover {
+  color: rgba(255, 255, 255, 0.9);
+} */
+tr:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/*==============SEARCH BOX =================*/
+
+/* .searchBox.input[type='text'] {
+  background-color: #3cbc8d;
+  color: white;
+} */
+.searchBox > input[type="text"] {
+  background-color: rgba(0, 0, 0, 0.8);
+
+  border: solid 2px rgba(255, 255, 255, 0.8);
+  color: white;
+}
+
+/* =============================================
+=============================================
+============================ =================
+============================================= */
+
+@media only screen and (max-width: 400px) {
+  .bookDataSmall {
+    display: hidden;
   }
 }
