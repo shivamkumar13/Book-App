@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import {
   Table,
   Button,
@@ -12,9 +12,9 @@ import {
   InputGroup,
   Label,
   Input
-} from 'reactstrap';
-import axios from 'axios';
-import BookList from './BookList';
+} from "reactstrap";
+import axios from "axios";
+import BookList from "./BookList";
 
 function searchingFor(term) {
   return function(x) {
@@ -41,33 +41,33 @@ class AllBooksPage extends Component {
 
       deleteBookModal: false,
 
-      term: '',
+      term: "",
 
       newBookData: {
-        title: '',
-        author: '',
-        ISBN: '',
-        publisher: '',
-        price: '',
-        genre: '',
-        format: '',
-        image: '../assets/images/default.jpg'
+        title: "",
+        author: "",
+        ISBN: "",
+        publisher: "",
+        price: "",
+        genre: "",
+        format: "",
+        image: "../assets/images/default.jpg"
       },
       editBookData: {
-        id: '',
-        title: '',
-        author: '',
-        ISBN: '',
-        publisher: '',
-        price: '',
-        genre: '',
-        format: '',
-        image: ''
+        id: "",
+        title: "",
+        author: "",
+        ISBN: "",
+        publisher: "",
+        price: "",
+        genre: "",
+        format: "",
+        image: ""
       },
 
       deleteBookData: {
-        id: '',
-        title: ''
+        id: "",
+        title: ""
       }
     };
   }
@@ -75,7 +75,7 @@ class AllBooksPage extends Component {
   /*=============================== METHODS / FUNCTIONS ===================================== */
 
   _refreshList() {
-    axios.get('http://localhost:3001/books').then(response => {
+    axios.get("http://localhost:3001/books").then(response => {
       this.setState({
         books: response.data
       });
@@ -97,7 +97,7 @@ class AllBooksPage extends Component {
 
   addBook() {
     axios
-      .post('http://localhost:3001/books', this.state.newBookData)
+      .post("http://localhost:3001/books", this.state.newBookData)
       .then(response => {
         let books = this.state.books;
         books.push(response.data);
@@ -105,14 +105,14 @@ class AllBooksPage extends Component {
           books: books,
           newBookModal: false,
           newBookData: {
-            title: '',
-            author: '',
-            ISBN: '',
-            publisher: '',
-            price: '',
-            genre: '',
-            format: '',
-            image: '../assets/images/default.jpg'
+            title: "",
+            author: "",
+            ISBN: "",
+            publisher: "",
+            price: "",
+            genre: "",
+            format: "",
+            image: "../assets/images/default.jpg"
           }
         });
       });
@@ -130,7 +130,7 @@ class AllBooksPage extends Component {
       image
     } = this.state.editBookData;
     axios
-      .put('http://localhost:3001/books/' + this.state.editBookData.id, {
+      .put("http://localhost:3001/books/" + this.state.editBookData.id, {
         title,
         author,
         ISBN,
@@ -144,15 +144,15 @@ class AllBooksPage extends Component {
         this.setState({
           editBookModal: false,
           editBookData: {
-            id: '',
-            title: '',
-            author: '',
-            ISBN: '',
-            publisher: '',
-            price: '',
-            genre: '',
-            format: '',
-            image: ''
+            id: "",
+            title: "",
+            author: "",
+            ISBN: "",
+            publisher: "",
+            price: "",
+            genre: "",
+            format: "",
+            image: ""
           }
         });
         this._refreshList();
@@ -186,7 +186,7 @@ class AllBooksPage extends Component {
   } */
 
   deleteBook(id) {
-    axios.delete('http://localhost:3001/books/' + id).then(response => {
+    axios.delete("http://localhost:3001/books/" + id).then(response => {
       /*  this.setState({
         deleteBookData: {
           id: '',
@@ -249,7 +249,7 @@ class AllBooksPage extends Component {
               </Button>
 
               {/*===========================  DELETE BUTTON  ===========================*/}
-              {''}
+              {""}
               <Button
                 className="m-1"
                 color="danger"
@@ -259,7 +259,7 @@ class AllBooksPage extends Component {
               </Button>
 
               {/*===============================================================*/}
-              {''}
+              {""}
             </td>
           </tr>
         );
@@ -273,7 +273,7 @@ class AllBooksPage extends Component {
             <div className="row justify-content-center">
               <Button
                 color="info"
-                className="col-6 col-md-1 mb-4"
+                className="col-6 col-md-1 mt-1 mb-4"
                 onClick={this.toggleNewBookModal.bind(this)}
               >
                 Add Book
@@ -401,7 +401,7 @@ class AllBooksPage extends Component {
                     this.setState({ newBookData });
                   }}
                 >
-                  {' '}
+                  {" "}
                   <option>--Select--</option>
                   <option>Science Fiction</option>
                   <option>Novel</option>
@@ -433,7 +433,7 @@ class AllBooksPage extends Component {
             <ModalFooter>
               <Button color="primary" onClick={this.addBook.bind(this)}>
                 Add Book
-              </Button>{' '}
+              </Button>{" "}
               <Button
                 color="secondary"
                 onClick={this.toggleNewBookModal.bind(this)}
@@ -575,7 +575,7 @@ class AllBooksPage extends Component {
             <ModalFooter>
               <Button color="primary" onClick={this.updateBook.bind(this)}>
                 Update Book
-              </Button>{' '}
+              </Button>{" "}
               <Button
                 color="secondary"
                 onClick={this.toggleEditBookModal.bind(this)}
@@ -594,10 +594,10 @@ class AllBooksPage extends Component {
               Confirm Delete
             </ModalHeader>
             <ModalBody>
-              Are you sure you want to delete{' '}
+              Are you sure you want to delete{" "}
               <span className="font-weight-bold">
                 {this.state.deleteBookData.title}
-              </span>{' '}
+              </span>{" "}
               ?
             </ModalBody>
             <ModalFooter>
@@ -606,7 +606,7 @@ class AllBooksPage extends Component {
                 onClick={this.toggleDeleteBookModal.bind(this)}
               >
                 Delete
-              </Button>{' '}
+              </Button>{" "}
               <Button
                 color="secondary"
                 onClick={this.deleteBook.bind(

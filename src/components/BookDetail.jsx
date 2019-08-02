@@ -4,25 +4,26 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 class BookDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    /* this.state = {
       modal: false
     };
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this); */
   }
 
-  toggle(e) {
-    if (e == 1) {
+  /*   toggle(e) {
+    if (e === 1) {
       this.setState(prevState => ({
         modal: !prevState.modal
       }));
       e = 0;
     }
-  }
+  } */
 
   render() {
+    console.log("card clicked inside bookdetail " + this.props.book.id);
     return (
       <div>
-        <Button color="danger" onClick={this.toggle(this.props.event)}>
+        {/* <Button color="danger" onClick={this.toggle(this.props.event)}>
           Click Me!
         </Button>
         <Modal
@@ -48,7 +49,7 @@ class BookDetail extends Component {
               Cancel
             </Button>
           </ModalFooter>
-        </Modal>
+        </Modal> */}
       </div>
     );
   }

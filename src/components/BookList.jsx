@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Card, Button, CardTitle, CardText, Row, Col } from "reactstrap";
 import BookBlock from "./BookBlock";
 import axios from "axios";
+import BookDetail from "./BookDetail";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 class BookList extends Component {
   constructor(props) {
@@ -22,11 +24,20 @@ class BookList extends Component {
     this._refreshList();
   }
 
+  handleCardClick(book) {
+    console.log("card clicked " + book.id);
+    return <div />;
+  }
+
   render() {
     let book = this.state.books.map(book => {
       return (
         <div className="col-3 col-sm-2 col-md-1 p-1 m-0">
-          <div key={book.id} className="">
+          <div
+            key={book.id}
+            className=""
+            onClick={this.handleCardClick.bind(this, book)}
+          >
             <BookBlock book={book} />
           </div>
         </div>
